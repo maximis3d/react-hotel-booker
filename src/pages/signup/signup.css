@@ -1,0 +1,13 @@
+.signup-container{
+    display: flex;
+    align-items: center;
+    color: f;
+}
+
+.signup{
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 4px;
+    background-color: #fff;
+}
