@@ -6,9 +6,19 @@ import MailList from "../../components/mailList/MailList";
 import Navbar from "../../components/navbar/Navbar";
 import PropertyList from "../../components/propertyList/PropertyList";
 import "./home.css";
+import { useNavigate } from "react-router-dom";
+import { useGlobalContext } from "../../context/GlobalContext";
+import React from "react";
 
+const Home = () => {
+  const { user } = useGlobalContext();
+  const navigate = useNavigate();
 
-export const Home = () => {
+  React.useEffect(() => {
+    if (!user && navigate) {
+      navigate("/");
+    }
+  }, [user, navigate]);
   return (
     <div>
       <Navbar />
